@@ -1,5 +1,7 @@
 # Kloudspot Crowd Management System
 
+**Live Demo:** [https://kloudspot-assignment-opal.vercel.app](https://kloudspot-assignment-opal.vercel.app)
+
 A unified interface for live crowd occupancy, demographics, and entry/exit monitoring. Built with **Angular 21** and real-time updates via **Socket.IO**.
 
 ## Features
