@@ -6,7 +6,7 @@ import { Observable, tap, timeout } from 'rxjs';
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = '/api/auth/login';
+    private apiUrl = 'https://hiring-dev.internal.kloudspot.com/api/auth/login';
     private tokenKey = 'kloudspot_token';
 
     constructor(private http: HttpClient) { }

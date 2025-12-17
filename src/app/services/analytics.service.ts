@@ -7,7 +7,7 @@ import { Observable, timeout } from 'rxjs';
     providedIn: 'root'
 })
 export class AnalyticsService {
-    private baseUrl = '/api/analytics';
+    private baseUrl = 'https://hiring-dev.internal.kloudspot.com/api/analytics';
 
     constructor(private http: HttpClient) { }
 
