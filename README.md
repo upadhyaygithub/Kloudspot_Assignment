@@ -1,69 +1,79 @@
 # Kloudspot Crowd Management System
 
-**Live Demo:** [https://kloudspot-assignment-opal.vercel.app](https://kloudspot-assignment-opal.vercel.app)
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)](https://socket.io/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-A unified interface for live crowd occupancy, demographics, and entry/exit monitoring. Built with **Angular 21** and real-time updates via **Socket.IO**.
+> **Live Demo:** [https://kloudspot-assignment-opal.vercel.app](https://kloudspot-assignment-opal.vercel.app)
 
-## Features
+## 📖 Overview
 
--   **Login Screen**: Secure authentication with JWT token management.
--   **Dashboard Overview**:
-    -   Live Occupancy (Real-time updates via Socket.IO)
-    -   Today's Footfall & Average Dwell Time
-    -   Demographic Charts
--   **Real-time Alerts**: Instant notifications for zone activity.
--   **Responsive Design**: Optimized for desktop and tablets.
+A comprehensive, real-time Crowd Management Dashboard designed to provide actionable insights into occupancy, demographics, and footfall patterns. Architected with **Angular 21**, this application leverages **Socket.IO** for instantaneous data streaming, ensuring operators have the most up-to-date information at a glance.
 
-## Tech Stack
+## ✨ Key Features
 
--   **Frontend**: Angular 21, TypeScript, Vanilla CSS
--   **Real-time**: Socket.IO Client
--   **HTTP**: Angular HttpClient / RxJS
+- **🚀 Real-Time Analytics**: Live occupancy tracking powered by WebSockets.
+- **📊 Interactive Visualizations**:
+    - **Demographics**: Dynamic charts (Pie/Donut) breaking down age and gender distribution.
+    - **Footfall Trends**: Historical and real-time entry/exit data.
+- **🔐 Secure Authentication**: Robust JWT-based login system.
+- **📱 Responsive Design**: Fully adaptive interface optimized for desktop and tablet viewports.
+- **⚡ Performance Optimized**: Utilizes Angular's latest change detection strategies for smooth rendering.
 
-## Setup & Run Instructions
+## 🛠️ Technology Stack
 
-1.  **Install Dependencies**:
+- **Frontend Framework**: Angular 21 (Standalone Components)
+- **Styling**: Vanilla CSS (Scoped & Modular)
+- **Real-Time Communication**: Socket.IO Client
+- **State Management**: RxJS (Reactive Extensions)
+- **Charts**: ApexCharts / Chart.js
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- npm (Node Package Manager)
+
+### Installation
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/upadhyaygithub/Kloudspot_Assignment.git
+    cd Kloudspot_Assignment
+    ```
+
+2.  **Install Dependencies**
     ```bash
     npm install
     ```
 
-2.  **Start the Application**:
+3.  **Run Development Server**
     ```bash
     npm start
     ```
-    Navigate to `http://localhost:4200/`.
+    Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Deployment
+## 🔑 Test Credentials
 
-This project is optimized for deployment on **Vercel** or **Netlify**.
+To explore the dashboard functionalities, please use the following credentials:
 
-### Vercel (Recommended)
-1.  Push your code to a GitHub repository.
-2.  Import project in Vercel.
-3.  Preset: **Angular**.
-4.  Build Command: `npm run build`
-5.  Output Directory: `dist/kloudspot-assignment/browser`
+| Type | Username | Password |
+| :--- | :--- | :--- |
+| **Admin** | `test@test.com` | `1234567890` |
 
-### Netlify
-1.  Import from Git.
-2.  Build Command: `npm run build --prod`
-3.  Publish Directory: `dist/kloudspot-assignment/browser`
+## 📦 Deployment
 
-## Credentials for Testing
+This project is configured for seamless deployment on Vercel.
 
-Use the specific test account provided in the instructions:
--   **Username**: `test@test.com`
--   **Password**: `1234567890`
+**Build Command:**
+```bash
+npm run build
+```
 
-## API Integration
-
-The application integrates with the following endpoints:
--   `POST /api/auth/login` - Authentication
--   `POST /api/analytics/occupancy` - Live Occupancy
--   `POST /api/analytics/footfall` - Footfall
--   `POST /api/analytics/dwell` - Dwell Time
-
-Real-time updates are handled via `wss://hiring-dev.internal.kloudspot.com` (Alerts & Live Occupancy).
+**Output Directory:**
+```
+dist/kloudspot-assignment/browser
+```
 
 ---
-*Assignment Submission for Kloudspot Hiring Process*
+*Developed by Umang Upadhyay*
