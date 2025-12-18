@@ -21,7 +21,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.4);
+  /* Dark overlay */
   z-index: 1;
 }
 
@@ -46,14 +47,16 @@
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .right-section {
   display: flex;
   justify-content: flex-end;
-  flex: 1; /* Allow it to take space */
-  min-width: 350px; /* Prevent collapse */
+  flex: 1;
+  /* Allow it to take space */
+  min-width: 350px;
+  /* Prevent collapse */
 }
 
 .login-card {
@@ -61,7 +64,7 @@
   border-radius: 12px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
@@ -94,7 +97,8 @@
 .form-group input {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid #ccc; /* Standard gray border */
+  border: 1px solid #ccc;
+  /* Standard gray border */
   border-radius: 6px;
   font-size: 1rem;
   box-sizing: border-box;
@@ -103,7 +107,8 @@
 
 .form-group input::placeholder {
   color: #999;
-  font-weight: 500; /* Bold placeholder as seen in "Parking_solutions" */
+  font-weight: 500;
+  /* Bold placeholder as seen in "Parking_solutions" */
 }
 
 .form-group input:focus {
@@ -129,7 +134,8 @@
 .login-btn {
   width: 100%;
   padding: 12px;
-  background-color: #009490; /* User requested color */
+  background-color: #009490;
+  /* User requested color */
   color: white;
   border: none;
   border-radius: 6px;
@@ -141,7 +147,8 @@
 }
 
 .login-btn:hover {
-  background-color: #007a76; /* Slightly darker shade of #009490 */
+  background-color: #007a76;
+  /* Slightly darker shade of #009490 */
 }
 
 /* Error Message */
@@ -169,12 +176,14 @@
   .left-section {
     max-width: 100%;
   }
-  
+
   .left-section h1 {
-     font-size: 2rem;
+    font-size: 2rem;
   }
 
   .right-section {
-     justify-content: center;
+    justify-content: center;
   }
 }
+
+/* Loading Overlay */

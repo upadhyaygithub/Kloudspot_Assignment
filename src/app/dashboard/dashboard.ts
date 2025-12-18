@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
@@ -16,6 +16,7 @@ import { Subscription } from 'rxjs';
 import { AnalyticsService } from '../services/analytics.service';
 import { AuthService } from '../services/auth.service';
 import { SocketService } from '../services/socket.service';
+import { LoadingService } from '../services/loading.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -24,8 +25,11 @@ import { SocketService } from '../services/socket.service';
     styleUrl: './dashboard.css',
 })
 export class Dashboard implements OnInit, OnDestroy {
+    private loadingService = inject(LoadingService);
     currentView: 'overview' | 'entries' = 'overview';
     showAlerts = false;
+    // ... (rest of properties omitted for brevity)
+
     alerts: any[] = [];
     showProfile = false;
     unreadAlerts = false;
@@ -528,9 +532,11 @@ export class Dashboard implements OnInit, OnDestroy {
                 }
 
                 this.cdr.detectChanges();
+                this.loadingService.hide();
             },
             error: (err) => {
                 console.warn('Occupancy API failed, using default', err);
+                this.loadingService.hide();
             }
         });
 

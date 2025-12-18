@@ -1,1 +1,11 @@
 <router-outlet></router-outlet>
+
+<div [style.display]="loadingService.isLoading() ? 'flex' : 'none'" class="loading-overlay">
+    <div class="loader-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
